@@ -1,0 +1,2 @@
+SUBSYSTEM=="power_supply", ATTR{online}=="0", RUN+="/bin/systemctl start nbfc-smart-control.service"
+SUBSYSTEM=="power_supply", ATTR{online}=="1", RUN+="/bin/systemctl start nbfc-smart-control.service"
