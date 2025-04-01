@@ -1,0 +1,9 @@
+[Unit]
+Description=Run Smart Fan Control Every 5 Minutes
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=5min
+
+[Install]
+WantedBy=timers.target
