@@ -1,0 +1,10 @@
+[Unit]
+Description=Smart Fan Control for HP EliteBook
+After=nbfc_service.service
+
+[Service]
+Type=oneshot
+ExecStart=~/bin/smart-fan-control.sh
+
+[Install]
+WantedBy=multi-user.target
