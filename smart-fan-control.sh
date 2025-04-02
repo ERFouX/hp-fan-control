@@ -3,8 +3,8 @@
 AC_ONLINE=$(cat /sys/class/power_supply/AC/online)
 if [ "$AC_ONLINE" = "1" ]; then
     # When charging, set fan to higher speed
-    /usr/bin/nbfc set -s 80 -f 0
-    echo "AC connected: Setting fan to high speed (80%)"
+    /usr/bin/nbfc set -s 85 -f 0
+    echo "AC connected: Setting fan to high speed (85%)"
 else
     # When on battery, use automatic control
     /usr/bin/nbfc set -a
