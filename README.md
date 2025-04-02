@@ -15,7 +15,7 @@ Or see the [nbfc](https://github.com/hirschmann/nbfc) repository
 ## Files Included
 
 - `smart-fan-control.sh`: Main script that checks if laptop is plugged in and adjusts fan speed accordingly
-- `fan-high.sh`: Simple script to set fans to high speed (80%)
+- `fan-high.sh`: Simple script to set fans to high speed (96%)
 - `fan-auto.sh`: Simple script to set fans to automatic control mode
 - `nbfc-smart-control.service`: Systemd service that runs the smart fan control script
 - `nbfc-smart-control.timer`: Systemd timer that runs the script every 5 minutes
