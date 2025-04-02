@@ -10,6 +10,7 @@ This solution uses `nbfc-linux` (NoteBook FanControl) which is a lightweight fan
 # Arch Linux (using an AUR helper like paru)
 paru -S nbfc-linux
 ```
+Or see the [nbfc](https://github.com/hirschmann/nbfc) repository
 
 ## Files Included
 
@@ -48,7 +49,7 @@ chmod +x ./install.sh
 ./install.sh
 ```
 
-### Manual
+## Manual Installation
 Copy the configuration files to their proper locations:
 
 ```bash
@@ -86,12 +87,13 @@ sudo udevadm control --reload-rules
 
 ## Usage
 
-After installation, the system should automatically adjust the fan speed based on whether the laptop is plugged in or running on battery:
+After installation, the system should **automatically** adjust the fan speed based on whether the laptop is plugged in or running on battery:
 
 - When plugged in: Fans run at 80% speed to keep the laptop cooler
 - When on battery: Fans are automatically controlled by nbfc based on temperature
 
-You can also manually control the fans:
+‌
+You can also **manually** control the fans:
 
 ```bash
 # Set fans to high speed (80%)
@@ -120,9 +122,9 @@ systemctl list-timers | grep nbfc
 
 ## Customization
 
-This installer will create a folder in your home - you can edit it and change it to /usr/bin or something else
+This installer will create a folder in your home, you can edit it and change it to `/usr/bin` or something else
 
-If you want to adjust the fan speeds, you can edit the `smart-fan-control.sh` script. The current setting uses 80% when plugged in, but you can change this to any value between 0 and 100.
+If you want to adjust the fan speeds, you can edit the `smart-fan-control.sh` script. The current setting **uses 80% when plugged in**, but you can change this to any value between 0 and 100.
 
 ## Troubleshooting
 
@@ -150,4 +152,4 @@ nbfc get-model-name
 ```
 
 ### support
-You support me by giving this repository a star ⭐.
+You support me by giving this repository a star ⭐
