@@ -19,12 +19,37 @@ paru -S nbfc-linux
 - `nbfc-smart-control.service`: Systemd service that runs the smart fan control script
 - `nbfc-smart-control.timer`: Systemd timer that runs the script every 5 minutes
 - `99-nbfc-ac-event.rules`: Udev rules to run the script when AC power is connected/disconnected
-- `HP EliteBook 850 G5.json`: NBFC configuration file for this laptop model
+- `HP EliteBook 850 G5.json`: NBFC configuration file for my laptop model
 
 ## Installation
 
 1. Install nbfc-linux as shown in prerequisites
-2. Copy the configuration files to their proper locations:
+```bash
+paru -S nbfc-linux
+```
+
+2. Clone the repository
+```bash
+git clone https://github.com/ERFouX/hp-fan-control.git
+```
+
+3. Go to the repository folder
+```bash
+cd hp-fan-control
+```
+
+4. To grant executable access to the file, enter the following command:
+```bash
+chmod +x ./install.sh
+```
+
+5. Run the installer
+```bash
+./install.sh
+```
+
+### Manual
+Copy the configuration files to their proper locations:
 
 ```bash
 # Create necessary directories
@@ -94,6 +119,8 @@ systemctl list-timers | grep nbfc
 ```
 
 ## Customization
+
+This installer will create a folder in your home - you can edit it and change it to /usr/bin or something else
 
 If you want to adjust the fan speeds, you can edit the `smart-fan-control.sh` script. The current setting uses 80% when plugged in, but you can change this to any value between 0 and 100.
 
