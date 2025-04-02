@@ -89,14 +89,14 @@ sudo udevadm control --reload-rules
 
 After installation, the system should **automatically** adjust the fan speed based on whether the laptop is plugged in or running on battery:
 
-- When plugged in: Fans run at 80% speed to keep the laptop cooler
+- When plugged in: Fans run at 85% speed to keep the laptop cooler
 - When on battery: Fans are automatically controlled by nbfc based on temperature
 
 ‌
 You can also **manually** control the fans:
 
 ```bash
-# Set fans to high speed (80%)
+# Set fans to high speed (96%)
 ~/bin/fan-high.sh
 
 # Set fans to automatic control
@@ -124,7 +124,7 @@ systemctl list-timers | grep nbfc
 
 This installer will create a folder in your home, you can edit it and change it to `/usr/bin` or something else
 
-If you want to adjust the fan speeds, you can edit the `smart-fan-control.sh` script. The current setting **uses 80% when plugged in**, but you can change this to any value between 0 and 100.
+If you want to adjust the fan speeds, you can edit the `smart-fan-control.sh` script. The current setting **uses 85% when plugged in**, but you can change this to any value between 0 and 100.
 
 ## Troubleshooting
 
