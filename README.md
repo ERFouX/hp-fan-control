@@ -133,6 +133,8 @@ If the fan control is not working:
 3. Run the script manually to see any errors: `sudo ~/bin/smart-fan-control.sh`
 4. Check the current AC status: `cat /sys/class/power_supply/AC/online` (1 means plugged in, 0 means on battery)
 
+I would be happy if you open an issue if you see any problems.
+
 ## Other Laptop Models
 
 To use this on other laptop models, you will need to find or create an nbfc configuration file for your specific model. You can list available configs with:
@@ -146,3 +148,6 @@ And get your model name with:
 ```bash
 nbfc get-model-name
 ```
+
+### support
+You support me by giving this repository a star ⭐.
